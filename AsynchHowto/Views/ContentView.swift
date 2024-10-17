@@ -7,10 +7,14 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				List{
-					NavItemView<GCDView>(name: "GCD") { GCDView() }
-					NavItemView<NSOperationView>(name: "NSOperations") { NSOperationView() }
-					NavItemView<AsyncAwaitView>(name: "AsyncAwait") { AsyncAwaitView() }
-					NavItemView<CombinePublisherView>(name: "Combine.Publisher") { CombinePublisherView() }
+					NavItemView<GCDView>(
+						img:"🍎", name: "GCD (Grand Central Dispatch)") { GCDView() }
+					NavItemView<NSOperationView>(
+						img:"🍒", name: "NSOperations") { NSOperationView() }
+					NavItemView<AsyncAwaitView>(
+						img:"🍐", name: "AsyncAwait") { AsyncAwaitView() }
+					NavItemView<CombinePublisherView>(
+						img:"🍊", name: "Combine.Publisher") { CombinePublisherView() }
 				}
 				.listStyle(.plain)
 			}
@@ -25,6 +29,7 @@ struct ContentView: View {
 }
 
 struct NavItemView<Content: View>: View {
+	var img:String
 	var name:String
 	@ViewBuilder let content: Content
 	
@@ -33,8 +38,11 @@ struct NavItemView<Content: View>: View {
 			content
 		} label: {
 			HStack {
-				Text("use \(name)")
-				Image(systemName: "chevron.right")
+				Text(img)
+					.padding(.trailing, 10)
+					.font(.title)
+				Text("\(name)")
+				
 			}
 			.padding(10)
 		}

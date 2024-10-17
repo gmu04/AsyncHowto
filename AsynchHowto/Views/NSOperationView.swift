@@ -4,8 +4,8 @@ import SwiftUI
 
 struct NSOperationView: View {
     var body: some View {
-        Text("Hello, NSOperationView!")
-			.font(.largeTitle)
+        Text("🍒 NSOperation")
+			.font(.title)
 		Spacer()
 
     }

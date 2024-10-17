@@ -4,8 +4,8 @@ import SwiftUI
 
 struct AsyncAwaitView: View {
     var body: some View {
-        Text("Hello, AsyncAwaitView!")
-			.font(.largeTitle)
+        Text("🍐 AsyncAwait")
+			.font(.title)
 		Spacer()
 
     }

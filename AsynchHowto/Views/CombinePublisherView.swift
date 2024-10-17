@@ -4,8 +4,8 @@ import SwiftUI
 
 struct CombinePublisherView: View {
     var body: some View {
-        Text("Hello, CombinePublisherView!")
-			.font(.largeTitle)
+        Text("🍊 Combine.Publisher")
+			.font(.title)
 		Spacer()
 
     }
