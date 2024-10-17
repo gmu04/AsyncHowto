@@ -7,13 +7,13 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				List{
-					NavItemView<GCDView>(
+					NavigationLinkView<GCDView>(
 						img:"🍎", name: "GCD (Grand Central Dispatch)") { GCDView() }
-					NavItemView<NSOperationView>(
+					NavigationLinkView<NSOperationView>(
 						img:"🍒", name: "NSOperations") { NSOperationView() }
-					NavItemView<AsyncAwaitView>(
+					NavigationLinkView<AsyncAwaitView>(
 						img:"🍐", name: "AsyncAwait") { AsyncAwaitView() }
-					NavItemView<CombinePublisherView>(
+					NavigationLinkView<CombinePublisherView>(
 						img:"🍊", name: "Combine.Publisher") { CombinePublisherView() }
 				}
 				.listStyle(.plain)
@@ -28,24 +28,4 @@ struct ContentView: View {
     ContentView()
 }
 
-struct NavItemView<Content: View>: View {
-	var img:String
-	var name:String
-	@ViewBuilder let content: Content
-	
-	var body: some View {
-		NavigationLink {
-			content
-		} label: {
-			HStack {
-				Text(img)
-					.padding(.trailing, 10)
-					.font(.title)
-				Text("\(name)")
-				
-			}
-			.padding(10)
-		}
 
-	}
-}
