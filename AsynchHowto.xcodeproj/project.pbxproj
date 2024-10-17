@@ -11,6 +11,10 @@
 		F7744E962CC0B211003E5793 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7744E952CC0B211003E5793 /* ContentView.swift */; };
 		F7744E982CC0B214003E5793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7744E972CC0B214003E5793 /* Assets.xcassets */; };
 		F7744E9B2CC0B214003E5793 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7744E9A2CC0B214003E5793 /* Preview Assets.xcassets */; };
+		F7744EA82CC0B6B9003E5793 /* GCDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7744EA72CC0B6B9003E5793 /* GCDView.swift */; };
+		F7744EAB2CC0B9B2003E5793 /* NSOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7744EAA2CC0B9B2003E5793 /* NSOperationView.swift */; };
+		F7744EAD2CC0BA80003E5793 /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7744EAC2CC0BA80003E5793 /* AsyncAwaitView.swift */; };
+		F7744EAF2CC0BA98003E5793 /* CombinePublisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7744EAE2CC0BA98003E5793 /* CombinePublisherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		F7744E952CC0B211003E5793 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7744E972CC0B214003E5793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7744E9A2CC0B214003E5793 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7744EA72CC0B6B9003E5793 /* GCDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDView.swift; sourceTree = "<group>"; };
+		F7744EAA2CC0B9B2003E5793 /* NSOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOperationView.swift; sourceTree = "<group>"; };
+		F7744EAC2CC0BA80003E5793 /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
+		F7744EAE2CC0BA98003E5793 /* CombinePublisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublisherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,11 @@
 		F7744E922CC0B211003E5793 /* AsynchHowto */ = {
 			isa = PBXGroup;
 			children = (
-				F7744E932CC0B211003E5793 /* AsynchHowtoApp.swift */,
-				F7744E952CC0B211003E5793 /* ContentView.swift */,
-				F7744E972CC0B214003E5793 /* Assets.xcassets */,
-				F7744E992CC0B214003E5793 /* Preview Content */,
+				F7744EA52CC0B250003E5793 /* App */,
+				F7744EA42CC0B244003E5793 /* Networking */,
+				F7744EA32CC0B239003E5793 /* Models */,
+				F7744EA22CC0B232003E5793 /* ViewModels */,
+				F7744EA12CC0B22C003E5793 /* Views */,
 			);
 			path = AsynchHowto;
 			sourceTree = "<group>";
@@ -65,6 +74,49 @@
 				F7744E9A2CC0B214003E5793 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7744EA12CC0B22C003E5793 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7744E952CC0B211003E5793 /* ContentView.swift */,
+				F7744EA72CC0B6B9003E5793 /* GCDView.swift */,
+				F7744EAA2CC0B9B2003E5793 /* NSOperationView.swift */,
+				F7744EAC2CC0BA80003E5793 /* AsyncAwaitView.swift */,
+				F7744EAE2CC0BA98003E5793 /* CombinePublisherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7744EA22CC0B232003E5793 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F7744EA32CC0B239003E5793 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7744EA42CC0B244003E5793 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F7744EA52CC0B250003E5793 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F7744E932CC0B211003E5793 /* AsynchHowtoApp.swift */,
+				F7744E972CC0B214003E5793 /* Assets.xcassets */,
+				F7744E992CC0B214003E5793 /* Preview Content */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7744EA82CC0B6B9003E5793 /* GCDView.swift in Sources */,
+				F7744EAF2CC0BA98003E5793 /* CombinePublisherView.swift in Sources */,
+				F7744EAB2CC0B9B2003E5793 /* NSOperationView.swift in Sources */,
 				F7744E962CC0B211003E5793 /* ContentView.swift in Sources */,
 				F7744E942CC0B211003E5793 /* AsynchHowtoApp.swift in Sources */,
+				F7744EAD2CC0BA80003E5793 /* AsyncAwaitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
