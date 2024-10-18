@@ -7,7 +7,7 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				List{
-				Text("Get posts from\njsonplaceholder.typicode.com")
+					Text("Get posts from\njsonplaceholder.typicode.com")
 						.italic()
 					
 					NavigationLinkView<GCDView>(
