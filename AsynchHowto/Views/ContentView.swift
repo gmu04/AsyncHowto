@@ -7,6 +7,9 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				List{
+				Text("Get posts from\njsonplaceholder.typicode.com")
+						.italic()
+					
 					NavigationLinkView<GCDView>(
 						img:"🍎", name: "GCD (Grand Central Dispatch)") { GCDView() }
 					
@@ -22,6 +25,7 @@ struct ContentView: View {
 				.listStyle(.plain)
 			}
 			.padding()
+			//.navigationBarTitleDisplayMode(.inline)
 			.navigationTitle("Async Howto")
 		}
     }
