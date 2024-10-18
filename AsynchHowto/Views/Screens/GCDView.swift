@@ -3,22 +3,14 @@
 import SwiftUI
 
 struct GCDView: View {
-	@ObservedObject private var postListVM = PostListVM()
+	@ObservedObject private var vm = PostsByGCDVM()
 	
     var body: some View {
 		Text("🍎 GCD")
 			.font(.title)
-		List{
-			ForEach(postListVM.posts, id: \.id){ post in
-				HStack {
-					Text("#\(post.id)")
-						.font(.title3)
-					Text(post.title)
-						.font(.caption)
-				}
-			}
-		}
-		.listStyle(.plain)
+		
+		PostsListView(posts: vm.posts)
+			.listStyle(.plain)
     }
 }
 

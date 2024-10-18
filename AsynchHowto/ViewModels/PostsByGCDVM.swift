@@ -3,7 +3,7 @@
 import SwiftUI
 import Combine
 
-class PostListVM: ObservableObject{
+class PostsByGCDVM: ObservableObject{
 	@Published var posts = [Post]()
 	
 	init() {

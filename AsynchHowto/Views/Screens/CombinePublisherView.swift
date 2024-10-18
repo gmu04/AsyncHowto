@@ -3,10 +3,14 @@
 import SwiftUI
 
 struct CombinePublisherView: View {
+	@ObservedObject private var vm = PostsByCombineVM()
+	
     var body: some View {
         Text("🍊 Combine.Publisher")
 			.font(.title)
-		Spacer()
+		
+		PostsListView(posts: vm.posts)
+			.listStyle(.plain)
 
     }
 }

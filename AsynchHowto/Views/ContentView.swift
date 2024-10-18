@@ -9,10 +9,13 @@ struct ContentView: View {
 				List{
 					NavigationLinkView<GCDView>(
 						img:"🍎", name: "GCD (Grand Central Dispatch)") { GCDView() }
-					NavigationLinkView<NSOperationView>(
-						img:"🍒", name: "NSOperations") { NSOperationView() }
+					
+					NavigationLinkView<OperationQueueView>(
+						img:"🍒", name: "Operation Queue") { OperationQueueView() }
+					
 					NavigationLinkView<AsyncAwaitView>(
 						img:"🍐", name: "AsyncAwait") { AsyncAwaitView() }
+					
 					NavigationLinkView<CombinePublisherView>(
 						img:"🍊", name: "Combine.Publisher") { CombinePublisherView() }
 				}

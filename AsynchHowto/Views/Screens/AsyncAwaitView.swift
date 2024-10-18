@@ -3,11 +3,14 @@
 import SwiftUI
 
 struct AsyncAwaitView: View {
+	@ObservedObject private var vm = PostsByAsyncAwaitVM()
+	
     var body: some View {
         Text("🍐 AsyncAwait")
 			.font(.title)
-		Spacer()
-
+		
+		PostsListView(posts: vm.posts)
+			.listStyle(.plain)
     }
 }
 
