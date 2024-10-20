@@ -6,8 +6,14 @@ struct AsyncAwaitView: View {
 	@ObservedObject private var vm = PostsByAsyncAwaitVM()
 	
     var body: some View {
-        Text("🍐 AsyncAwait")
+        Text("🍐 Async\\Await")
 			.font(.title)
+		
+		Text("Not implemented")
+			.font(.largeTitle)
+			.foregroundStyle(.red)
+			.padding()
+
 		
 		PostsListView(posts: vm.posts)
 			.listStyle(.plain)

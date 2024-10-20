@@ -16,7 +16,7 @@ class DownloadOperation: AsyncOperation{
 		super.main()
 		print("\(name ?? "").main starts - \(Thread.current.description)")
 		
-		client.fetchData { result in
+		client.getData { result in
 			switch result{
 				case .success(let data):
 						self.data = data

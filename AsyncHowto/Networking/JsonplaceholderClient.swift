@@ -2,27 +2,20 @@
 
 import Foundation
 
-protocol APIClient: AnyObject{
-	func fetchData(_ completion:@escaping (Result<Data, NetworkError>)->())
-}
 
-enum NetworkError: Error{
-	case invalidURL
-	case error(String)
-	case error(err:Error)
-	case parsingData
-	
-}
+
 
 final class JsonplaceholderClient: APIClient{
+	
+	let urlStr = "https://jsonplaceholder.typicode.com/posts"
+	
 	
 	/**
 	 Fetch posts data from jsonplaceholder API
 	 */
-	func fetchData(_ completion:@escaping (Result<Data, NetworkError>)->()){
+	func getData(_ completion:@escaping (Result<Data, NetworkError>)->()){
 		
 		//check - url valid
-		let urlStr = "https://jsonplaceholder.typicode.com/posts"
 		guard let urlValid = URL(string: urlStr) else{ return completion(.failure(.invalidURL)) }
 		
 		let request = URLRequest(url: urlValid)

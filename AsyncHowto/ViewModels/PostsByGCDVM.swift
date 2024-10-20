@@ -12,7 +12,7 @@ class PostsByGCDVM: ObservableObject{
 	
 	private func getPosts(){
 		let client = JsonplaceholderClient()
-		client.fetchData { result in
+		client.getData { result in
 			//print(posts)
 			switch result{
 				case .success(let data):

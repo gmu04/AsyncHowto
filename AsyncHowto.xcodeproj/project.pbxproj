@@ -27,6 +27,9 @@
 		F795D31F2CC2746000C21907 /* PostsByAsyncAwaitVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F795D31E2CC2746000C21907 /* PostsByAsyncAwaitVM.swift */; };
 		F7BBFE622CC114F900A95694 /* AppDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBFE612CC114F900A95694 /* AppDecoder.swift */; };
 		F7BBFE662CC11CA200A95694 /* NavigationLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBFE652CC11CA200A95694 /* NavigationLinkView.swift */; };
+		F7E361392CC540C4008DCBFC /* JsonplaceholderClient+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E361382CC540C4008DCBFC /* JsonplaceholderClient+ext.swift */; };
+		F7E3613B2CC54177008DCBFC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3613A2CC54177008DCBFC /* NetworkError.swift */; };
+		F7E3613D2CC5419B008DCBFC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3613C2CC5419B008DCBFC /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		F795D31E2CC2746000C21907 /* PostsByAsyncAwaitVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsByAsyncAwaitVM.swift; sourceTree = "<group>"; };
 		F7BBFE612CC114F900A95694 /* AppDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDecoder.swift; sourceTree = "<group>"; };
 		F7BBFE652CC11CA200A95694 /* NavigationLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkView.swift; sourceTree = "<group>"; };
+		F7E361382CC540C4008DCBFC /* JsonplaceholderClient+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonplaceholderClient+ext.swift"; sourceTree = "<group>"; };
+		F7E3613A2CC54177008DCBFC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F7E3613C2CC5419B008DCBFC /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,10 @@
 		F7744EA42CC0B244003E5793 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F7E3613C2CC5419B008DCBFC /* APIClient.swift */,
+				F7E3613A2CC54177008DCBFC /* NetworkError.swift */,
 				F7744EB02CC0DDFE003E5793 /* JsonplaceholderClient.swift */,
+				F7E361382CC540C4008DCBFC /* JsonplaceholderClient+ext.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -257,9 +266,12 @@
 				F7744EAF2CC0BA98003E5793 /* CombinePublisherView.swift in Sources */,
 				F7744EAB2CC0B9B2003E5793 /* OperationQueueView.swift in Sources */,
 				F7744EB32CC0E1CC003E5793 /* Post.swift in Sources */,
+				F7E3613D2CC5419B008DCBFC /* APIClient.swift in Sources */,
 				F7744E962CC0B211003E5793 /* ContentView.swift in Sources */,
+				F7E3613B2CC54177008DCBFC /* NetworkError.swift in Sources */,
 				F7BBFE662CC11CA200A95694 /* NavigationLinkView.swift in Sources */,
 				F7744E942CC0B211003E5793 /* AsynchHowtoApp.swift in Sources */,
+				F7E361392CC540C4008DCBFC /* JsonplaceholderClient+ext.swift in Sources */,
 				F7744EB12CC0DDFE003E5793 /* JsonplaceholderClient.swift in Sources */,
 				F7744EAD2CC0BA80003E5793 /* AsyncAwaitView.swift in Sources */,
 				F795D3192CC26D3D00C21907 /* ParseOperation.swift in Sources */,

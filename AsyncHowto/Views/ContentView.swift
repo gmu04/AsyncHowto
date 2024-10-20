@@ -7,7 +7,7 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				List{
-					Text("Get posts from\njsonplaceholder.typicode.com")
+					Text("Get \"posts\" from\njsonplaceholder.typicode.com")
 						.italic()
 					
 					NavigationLinkView<GCDView>(
@@ -17,10 +17,10 @@ struct ContentView: View {
 						img:"🍒", name: "Operation Queue") { OperationQueueView() }
 					
 					NavigationLinkView<AsyncAwaitView>(
-						img:"🍐", name: "AsyncAwait") { AsyncAwaitView() }
+						img:"🍐", name: "Async\\Await") { AsyncAwaitView() }
 					
 					NavigationLinkView<CombinePublisherView>(
-						img:"🍊", name: "Combine.Publisher") { CombinePublisherView() }
+						img:"🍊", name: "Combine - Publisher") { CombinePublisherView() }
 				}
 				.listStyle(.plain)
 			}
