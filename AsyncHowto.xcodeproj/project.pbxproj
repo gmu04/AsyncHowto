@@ -126,8 +126,8 @@
 			children = (
 				F7744EB42CC0E5BE003E5793 /* PostsByGCDVM.swift */,
 				F795D3162CC2639D00C21907 /* PostsByOperationQueueVM.swift */,
-				F795D31E2CC2746000C21907 /* PostsByAsyncAwaitVM.swift */,
 				F795D31C2CC273E400C21907 /* PostsByCombineVM.swift */,
+				F795D31E2CC2746000C21907 /* PostsByAsyncAwaitVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 			children = (
 				F7744EA72CC0B6B9003E5793 /* GCDView.swift */,
 				F7744EAA2CC0B9B2003E5793 /* OperationQueueView.swift */,
-				F7744EAC2CC0BA80003E5793 /* AsyncAwaitView.swift */,
 				F7744EAE2CC0BA98003E5793 /* CombinePublisherView.swift */,
+				F7744EAC2CC0BA80003E5793 /* AsyncAwaitView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

@@ -17,4 +17,23 @@ extension JsonplaceholderClient{
 			throw NetworkError.exception(error: error)
 		}
 	}
+	
+	
+	/**
+	 Convert a callback function into async/wait function
+	 */
+	func getDataWithContinuation() async throws -> Data{
+		return try await withCheckedThrowingContinuation { continuation in
+			//legacy callback function
+			self.getData { completion in
+				switch completion{
+					case .success(let data):
+						continuation.resume(returning: data)
+					case .failure(let networkError):
+						continuation.resume(throwing: networkError)
+				}
+			}
+		}
+	}	
+	
 }

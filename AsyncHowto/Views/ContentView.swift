@@ -15,11 +15,12 @@ struct ContentView: View {
 				NavigationLinkView<OperationQueueView>(
 					img:"🍒", name: "Operation Queue") { OperationQueueView() }
 				
+				NavigationLinkView<CombinePublisherView>(
+					img:"🍊", name: "Combine - Publisher") { CombinePublisherView() }
+
 				NavigationLinkView<AsyncAwaitView>(
 					img:"🍐", name: "Async\\Await") { AsyncAwaitView() }
 				
-				NavigationLinkView<CombinePublisherView>(
-					img:"🍊", name: "Combine - Publisher") { CombinePublisherView() }
 			}
 			.listStyle(.plain)
 			.padding()

@@ -14,8 +14,10 @@ class PostsByAsyncAwaitVM: ObservableObject{
 	
 	func getPosts() async{
 		do{
-
-			let data = try await client.getData()
+			let data = 
+				//try await client.getData()
+				try await client.getDataWithContinuation()
+			
 			let posts = AppDecoder.decodePostsDataToArray(data)
 			if !posts.isEmpty{
 				DispatchQueue.main.async { [weak self] in
@@ -28,5 +30,12 @@ class PostsByAsyncAwaitVM: ObservableObject{
 			print("ERR: \(error)")
 		}
 	}
-		
+
+//	func getPostsWithContinuation() async{
+//		await withCheckedContinuation { continuation in
+//
+//
+//		}
+//	}
+
 }
