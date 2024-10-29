@@ -23,17 +23,17 @@ final class JsonplaceholderClient: APIClient{
 		URLSession.shared.dataTask(with: request) { data, urlResponse, error in
 			//check - no http error
 			guard error == nil else{
-				return completion(.failure(.error(err: error!)))
+				return completion(.failure(.exception(error: error!)))
 			}
 			
 			//check - http status 200
 			if let httpResponse = urlResponse as? HTTPURLResponse, httpResponse.statusCode != 200{
-				return completion(.failure(.error("ERR: httpResponse - statusCode: \(httpResponse.statusCode)")))
+				return completion(.failure(.exception("ERR: httpResponse - statusCode: \(httpResponse.statusCode)")))
 			}
 			
 			//check data is valid
 			guard let dataValid = data else{
-				return completion(.failure(.error("Invalid data")))
+				return completion(.failure(.exception("Invalid data")))
 			}
 			
 			//SUCCESS

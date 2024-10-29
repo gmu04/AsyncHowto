@@ -6,12 +6,13 @@ struct CombinePublisherView: View {
 	@ObservedObject private var vm = PostsByCombineVM()
 	
     var body: some View {
-        Text("🍊 Combine - Publisher")
-			.font(.title)
-		
-		PostsListView(posts: vm.posts)
-			.listStyle(.plain)
-
+		VStack {
+			Text("🍊 Combine - Publisher")
+				.font(.title)
+			
+			PostsListView(posts: vm.posts)
+				.listStyle(.plain)
+		}
     }
 }
 

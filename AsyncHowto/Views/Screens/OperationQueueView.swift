@@ -6,14 +6,14 @@ struct OperationQueueView: View {
 	@ObservedObject private var vm = PostsByOperationQueueVM()
 	
 	var body: some View {
-		Text("🍒 Operation Queue")
-			.font(.title)
-		
-		PostsListView(posts: vm.posts)
-			.listStyle(.plain)
+		VStack {
+			Text("🍒 Operation Queue")
+				.font(.title)
+
+			PostsListView(posts: vm.posts)
+				.listStyle(.plain)
+		}
 	}
-	
-		
 }
 
 #Preview {

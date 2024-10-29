@@ -5,21 +5,25 @@ import SwiftUI
 struct AsyncAwaitView: View {
 	@ObservedObject private var vm = PostsByAsyncAwaitVM()
 	
-    var body: some View {
-        Text("🍐 Async\\Await")
-			.font(.title)
-		
-		Text("Not implemented")
-			.font(.largeTitle)
-			.foregroundStyle(.red)
-			.padding()
-
-		
-		PostsListView(posts: vm.posts)
-			.listStyle(.plain)
-    }
+	var body: some View {
+		VStack {
+			Text("🍐 Async\\Await")
+				.font(.title)
+			
+			PostsListView(posts: vm.posts)
+				.listStyle(.plain)
+			
+			/*Text("Not implemented")
+				.font(.largeTitle)
+				.foregroundStyle(.red)
+				.padding()*/
+		}
+		.task {
+			await vm.getPosts()
+		}
+	}
 }
 
 #Preview {
-    AsyncAwaitView()
+	AsyncAwaitView()
 }

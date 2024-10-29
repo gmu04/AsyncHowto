@@ -4,8 +4,8 @@ import Foundation
 
 enum NetworkError: Error{
 	case invalidURL
-	case error(String)
-	case error(err:Error)
+	case exception(String)
+	case exception(error:Error)
 	case parsingData
 	
 }

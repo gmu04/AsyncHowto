@@ -6,11 +6,13 @@ struct GCDView: View {
 	@ObservedObject private var vm = PostsByGCDVM()
 	
     var body: some View {
-		Text("🍎 GCD")
-			.font(.title)
-		
-		PostsListView(posts: vm.posts)
-			.listStyle(.plain)
+		VStack {
+			Text("🍎 GCD")
+				.font(.title)
+			
+			PostsListView(posts: vm.posts)
+				.listStyle(.plain)
+		}
     }
 }
 
