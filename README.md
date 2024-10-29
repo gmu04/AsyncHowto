@@ -7,3 +7,8 @@ Frameworks I use in this demo project:
 * Operation/OperationQueue,
 * Async/Await,
 * Combine
+
+
+TODO:
+* Use PostViewModel struct in Views instead of Post model
+* make getPosts() private in PostsByAsyncAwaitVM
